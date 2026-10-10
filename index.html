@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#07090e">
+  <meta name="description" content="Studio prompt video affiliate fashion (start frame ke end frame) untuk TikTok/Shopee.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Omni Affiliate">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Omni Fashion Video Prompt Architect - Affiliate Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#fdf4ff',
+              500: '#d946ef',
+              600: '#c026d3',
+              700: '#a21caf',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #07090e;
+      color: #f1f5f9;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0b0f19;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+    .gradient-border {
+      background: linear-gradient(135deg, rgba(217, 70, 239, 0.3), rgba(99, 102, 241, 0.1));
+    }
+    .badge-start {
+      background: rgba(16, 185, 129, 0.12);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .badge-end {
+      background: rgba(168, 85, 247, 0.12);
+      color: #c084fc;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+    .badge-motion {
+      background: rgba(56, 189, 248, 0.12);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    .badge-vo {
+      background: rgba(251, 146, 60, 0.12);
+      color: #fb923c;
+      border: 1px solid rgba(251, 146, 60, 0.3);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-fuchsia-500 selection:text-white">
+
+  <header class="border-b border-slate-800/90 bg-slate-950/90 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-fuchsia-600 via-purple-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-fuchsia-600/25">
+          <i class="fa-solid fa-vest-patches text-white text-lg"></i>
+        </div>
+        <div>
+          <h1 class="text-base font-extrabold tracking-tight text-white flex items-center gap-2">
+            Omni Fashion Affiliate Studio
+          </h1>
+          <p class="text-[11px] text-slate-400">Creative Director & AI Video Prompt Engineer Afiliasi TikTok / Shopee</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button id="btnExportOmni" class="text-xs px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-fuchsia-600 to-indigo-600 hover:from-fuchsia-500 hover:to-indigo-500 text-white font-semibold flex items-center gap-1.5 shadow-md shadow-fuchsia-600/30 transition">
+          <i class="fa-solid fa-copy"></i>
+          <span>Salin Format Omni</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+
+    <!-- Section 1: Dual Image Upload & Physical Analysis -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+      <!-- LEFT: 2 Input Photos (Model & Product) -->
+      <section class="lg:col-span-7 space-y-4">
+        <div class="bg-slate-900/80 border border-slate-800/90 rounded-2xl p-5 shadow-xl">
+          <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+            <div class="flex items-center gap-2">
+              <span class="flex h-2.5 w-2.5 relative">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-fuchsia-500"></span>
+              </span>
+              <h2 class="text-xs font-bold uppercase tracking-wider text-slate-200">
+                1. Foto Referensi (Model & Produk Fashion)
+              </h2>
+            </div>
+            <div class="flex items-center gap-1.5 text-[11px] text-emerald-400">
+              <i class="fa-solid fa-pen-to-square text-xs"></i>
+              <span>Mode Tulis Manual Aktif</span>
+            </div>
+          </div>
+
+          <!-- Dual Upload Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <!-- FOTO 1: MODEL AI / ORANG -->
+            <div class="bg-slate-950/70 border border-slate-800/80 rounded-xl p-4 flex flex-col justify-between hover:border-fuchsia-500/40 transition">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-fuchsia-500/10 text-fuchsia-400 border border-fuchsia-500/30 flex items-center gap-1.5 font-mono">
+                    <i class="fa-solid fa-user"></i> Foto 1: @img1model
+                  </span>
+                  <span class="text-[10px] text-slate-400">Postur & Wajah</span>
+                </div>
+
+                <div id="dropModel" class="relative border-2 border-dashed border-slate-700/80 hover:border-fuchsia-500/50 rounded-xl h-36 flex flex-col items-center justify-center cursor-pointer overflow-hidden bg-slate-900/40 transition">
+                  <input type="file" id="fileModel" accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer z-10">
+                  <div id="previewModelBox" class="hidden w-full h-full relative">
+                    <img id="imgModel" src="" alt="Model Reference" class="w-full h-full object-cover">
+                    <button type="button" id="btnRemoveModel" class="absolute top-2 right-2 bg-black/75 hover:bg-rose-600 text-white rounded-full w-7 h-7 flex items-center justify-center text-xs z-20 transition">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                  <div id="placeholderModel" class="text-center p-3">
+                    <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-fuchsia-500/10 border border-fuchsia-500/20 flex items-center justify-center text-fuchsia-400">
+                      <i class="fa-solid fa-image text-sm"></i>
+                    </div>
+                    <p class="text-xs font-semibold text-slate-200">Upload Foto Model</p>
+                    <p class="text-[10px] text-slate-400">Tag: @img1model</p>
+                  </div>
+                </div>
+
+                <!-- Analysis Fields: Model Traits -->
+                <div class="mt-3 space-y-1.5">
+                  <label class="text-[11px] font-semibold text-slate-300 flex items-center justify-between">
+                    <span>Ciri Fisik Model (@img1model):</span>
+                    <span class="text-[10px] text-fuchsia-400 font-mono">Model Traits</span>
+                  </label>
+                  <textarea id="modelTraitsInput" rows="2" placeholder="Wanita Asia Tenggara ~22 tahun, rambut hitam sebahu, kulit cerah natural, tinggi 163cm..." class="w-full text-xs bg-slate-900/90 border border-slate-700/80 rounded-lg p-2 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-fuchsia-400 font-mono transition"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- FOTO 2: PRODUK FASHION -->
+            <div class="bg-slate-950/70 border border-slate-800/80 rounded-xl p-4 flex flex-col justify-between hover:border-indigo-500/40 transition">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 flex items-center gap-1.5 font-mono">
+                    <i class="fa-solid fa-shirt"></i> Foto 2: @img2produk
+                  </span>
+                  <span class="text-[10px] text-slate-400">Bahan & Cutting</span>
+                </div>
+
+                <div id="dropProduct" class="relative border-2 border-dashed border-slate-700/80 hover:border-indigo-500/50 rounded-xl h-36 flex flex-col items-center justify-center cursor-pointer overflow-hidden bg-slate-900/40 transition">
+                  <input type="file" id="fileProduct" accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer z-10">
+                  <div id="previewProductBox" class="hidden w-full h-full relative">
+                    <img id="imgProduct" src="" alt="Product Reference" class="w-full h-full object-cover">
+                    <button type="button" id="btnRemoveProduct" class="absolute top-2 right-2 bg-black/75 hover:bg-rose-600 text-white rounded-full w-7 h-7 flex items-center justify-center text-xs z-20 transition">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                  <div id="placeholderProduct" class="text-center p-3">
+                    <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
+                      <i class="fa-solid fa-tag text-sm"></i>
+                    </div>
+                    <p class="text-xs font-semibold text-slate-200">Upload Foto Produk</p>
+                    <p class="text-[10px] text-slate-400">Tag: @img2produk</p>
+                  </div>
+                </div>
+
+                <!-- Analysis Fields: Garment Traits -->
+                <div class="mt-3 space-y-1.5">
+                  <label class="text-[11px] font-semibold text-slate-300 flex items-center justify-between">
+                    <span>Detail Bahan & Spesifikasi (@img2produk):</span>
+                    <span class="text-[10px] text-indigo-400 font-mono">Tulis Manual</span>
+                  </label>
+                  <textarea id="productTraitsInput" rows="2" placeholder="Tuliskan spesifikasi detail produk asli: jenis baju, warna utama, bahan/kain, kerah, lengan, fitting..." class="w-full text-xs bg-slate-900/90 border border-slate-700/80 rounded-lg p-2 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-400 font-mono transition"></textarea>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Info Bar -->
+          <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between gap-3">
+            <div class="text-[11px] text-slate-400 flex items-center gap-2">
+              <i class="fa-solid fa-circle-info text-sky-400"></i>
+              <span>Foto dipetakan ke tag <code>@img1model</code> dan <code>@img2produk</code> untuk akurasi generator gambar. Tuliskan deskripsi secara manual.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT: Affiliate Strategy, Product Name, Hook & CTA Control -->
+      <section class="lg:col-span-5 bg-slate-900/80 border border-slate-800/90 rounded-2xl p-5 shadow-xl flex flex-col justify-between space-y-4">
+        <div class="space-y-3.5">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-200 flex items-center gap-2">
+              <i class="fa-solid fa-bullhorn text-fuchsia-400"></i> Strategi Hook, Try On & CTA
+            </h2>
+            <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-800 text-fuchsia-300 font-mono">Wajib Nama Produk</span>
+          </div>
+
+          <!-- NAMA PRODUK (WAJIB) -->
+          <div class="bg-fuchsia-950/20 border border-fuchsia-500/30 rounded-xl p-3">
+            <label class="text-xs font-bold text-fuchsia-300 flex items-center justify-between mb-1">
+              <span class="flex items-center gap-1.5">
+                <i class="fa-solid fa-asterisk text-[10px] text-rose-400"></i> Nama Produk (Wajib untuk Skrip & Dialog):
+              </span>
+              <span class="text-[10px] text-slate-400 font-normal">Disisipkan di [ produk ]</span>
+            </label>
+            <input type="text" id="productNameInput" value="" placeholder="Contoh: Blus Crinkle Korean Style, Kulot Linen Highwaist, Hoodie Oversized..." class="w-full text-xs bg-slate-950 border border-fuchsia-500/40 rounded-lg p-2.5 text-white font-semibold focus:outline-none focus:border-fuchsia-400">
+            <p id="productNameWarning" class="text-[10px] text-rose-400 mt-1 hidden flex items-center gap-1">
+              <i class="fa-solid fa-circle-exclamation"></i> Harap isi nama produk agar dialog dan hook tersusun optimal!
+            </p>
+          </div>
+
+          <!-- HOOK SELECTOR DENGAN 3 KELOMPOK LENGKAP -->
+          <div>
+            <div class="flex items-center justify-between mb-1">
+              <label class="text-xs font-semibold text-slate-300">Pilihan Hook (Scene 1 - Belum Dipakai):</label>
+              <span class="text-[10px] text-slate-400" id="hookCountBadge">33 Pilihan</span>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-1 mb-1.5">
+              <button type="button" onclick="switchHookGroup('group1')" id="tabHook1" class="py-1 px-1.5 rounded text-[10px] font-semibold border border-fuchsia-500 bg-fuchsia-500/20 text-fuchsia-300 transition text-center truncate">1. Tanya/Problem</button>
+              <button type="button" onclick="switchHookGroup('group2')" id="tabHook2" class="py-1 px-1.5 rounded text-[10px] font-semibold border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700 transition text-center truncate">2. Kejujuran/Try On</button>
+              <button type="button" onclick="switchHookGroup('group3')" id="tabHook3" class="py-1 px-1.5 rounded text-[10px] font-semibold border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700 transition text-center truncate">3. Murah & Promo</button>
+            </div>
+
+            <select id="hookSelect" class="w-full text-xs bg-slate-950 border border-slate-700 rounded-lg p-2 text-slate-200 focus:outline-none focus:border-fuchsia-400 leading-normal">
+              <!-- Populated via JS based on group -->
+            </select>
+          </div>
+
+          <!-- CTA SELECTOR (FOMO & MENDESAK) -->
+          <div>
+            <label class="text-xs font-semibold text-slate-300 block mb-1">
+              Pilihan Call-to-Action (CTA Mendesak & FOMO):
+            </label>
+            <select id="ctaSelect" class="w-full text-xs bg-slate-950 border border-slate-700 rounded-lg p-2 text-slate-200 focus:outline-none focus:border-emerald-400">
+              <option value="1">1. Serius, sebelum kehabisan lagi, mending beli sekarang</option>
+              <option value="2">2. Yang udah paham gak usah lama buat cek keranjang</option>
+              <option value="3">3. Ini lagi diskon, besok belum tentu masih ada</option>
+              <option value="4">4. Kalau nunggu biasanya malah gak jadi beli</option>
+              <option value="5">5. Udah banyak yang checkout, kamu mau nunggu apa lagi?</option>
+              <option value="6">6. Mendingan beli sekarang sebelum harganya naik lagi</option>
+              <option value="custom">Opsi Custom FOMO: "Yuk checkout sekarang sebelum kehabisan, link ada di bawah ya!"</option>
+            </select>
+          </div>
+
+          <!-- Latar Belakang & Jumlah Scene -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+            <div>
+              <label class="text-[11px] font-semibold text-slate-300 block mb-1">Setting Latar Belakang:</label>
+              <input type="text" id="videoSetting" value="" placeholder="Contoh: Aesthetic modern minimalist bedroom with soft sheer curtains and warm morning sunlight" class="w-full text-xs bg-slate-950 border border-slate-700 rounded-lg p-2 text-slate-200 focus:outline-none focus:border-indigo-400">
+            </div>
+            <div>
+              <label class="text-[11px] font-semibold text-slate-300 block mb-1">Struktur Scene (Maks 10s):</label>
+              <div class="grid grid-cols-2 gap-1.5" id="sceneCountSelector">
+                <button type="button" data-scenes="3" class="scene-sel-btn py-2 px-1 rounded-lg text-xs font-semibold border border-fuchsia-500 bg-fuchsia-600/20 text-fuchsia-300 transition text-center">3 Scene (Hook-Review-CTA)</button>
+                <button type="button" data-scenes="4" class="scene-sel-btn py-2 px-1 rounded-lg text-xs font-semibold border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700 transition text-center">4 Scene (Multi-Angle)</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <button type="button" id="btnGenerateOmni" class="w-full mt-3 py-2.5 px-4 rounded-xl bg-gradient-to-r from-fuchsia-600 via-purple-600 to-indigo-600 hover:from-fuchsia-500 hover:to-indigo-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-fuchsia-600/30 transition">
+          <i class="fa-solid fa-clapperboard"></i>
+          <span>Rancang Prompt Omni Workflow (Start-to-End)</span>
+        </button>
+      </section>
+
+    </div>
+
+    <!-- Section 2: Output Omni Workflow Cards -->
+    <div class="space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h2 class="text-base font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-film text-fuchsia-400"></i>
+            PROMPT OMNI WORKFLOW
+          </h2>
+          <p class="text-xs text-slate-400">Struktur presisi start frame to end frame, alur model belum pakai produk &rarr; try on & review &rarr; CTA FOMO.</p>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button type="button" id="btnCopyRawMarkdown" class="text-xs px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 flex items-center gap-1.5 transition">
+            <i class="fa-solid fa-terminal text-indigo-400"></i>
+            <span>Salin Format Teks Baku</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Container Scenes -->
+      <div id="omniScenesContainer" class="space-y-6">
+        <div id="emptyScenePlaceholder" class="border-2 border-dashed border-slate-800 rounded-2xl p-10 text-center text-slate-500 bg-slate-900/30">
+          <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-slate-800/80 flex items-center justify-center text-slate-400">
+            <i class="fa-solid fa-clapperboard text-lg"></i>
+          </div>
+          <p class="text-sm font-semibold text-slate-300">Prompt Belum Dirancang</p>
+          <p class="text-xs text-slate-500 mt-1 max-w-md mx-auto">Alur cerita otomatis telah dinonaktifkan. Silakan isi foto referensi dan nama produk, lalu klik <strong>"Rancang Prompt Omni Workflow"</strong> saat Anda siap menyusun alur cerita.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="border-t border-slate-800/90 bg-slate-950/80 py-6 mt-12 text-slate-500 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p>© 2026 Omni Fashion Video Prompt Architect - Dioptimalkan untuk model video start-frame-to-end-frame.</p>
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-400"></i> Strict Omni Structure</span>
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-hashtag text-fuchsia-400"></i> Affiliate Ready</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: Export All Formatted Text -->
+  <div id="modalExport" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-3xl w-full p-6 shadow-2xl flex flex-col max-h-[85vh]">
+      <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
+        <div>
+          <h3 class="text-base font-bold text-white">PROMPT OMNI WORKFLOW (Keluaran Teks)</h3>
+          <p class="text-[11px] text-slate-400">Format persis sesuai spesifikasi teknis Omni Generator</p>
+        </div>
+        <button type="button" id="btnCloseExport" class="text-slate-400 hover:text-white text-lg"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="flex-1 overflow-y-auto mb-4">
+        <textarea id="exportTextarea" readonly class="w-full h-96 font-mono text-xs bg-slate-950 border border-slate-800 rounded-xl p-4 text-slate-200 focus:outline-none leading-relaxed"></textarea>
+      </div>
+
+      <div class="flex items-center justify-between pt-2">
+        <span class="text-xs text-slate-400" id="exportTotalCount">3 Scene terformat</span>
+        <button type="button" id="btnCopyFromModal" class="px-4 py-2 rounded-xl text-xs font-semibold bg-fuchsia-600 hover:bg-fuchsia-500 text-white flex items-center gap-1.5 transition">
+          <i class="fa-solid fa-copy"></i>
+          <span>Salin ke Clipboard</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Box -->
+  <div id="toastBox" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-slate-800 border border-slate-700 text-white text-xs px-4 py-3 rounded-xl shadow-2xl flex items-center gap-2.5">
+      <i id="toastIcon" class="fa-solid fa-circle-check text-emerald-400"></i>
+      <span id="toastMessage">Prompt berhasil disalin!</span>
+    </div>
+  </div>
+
+  <script>
+    // Master Hook Bank sesuai dengan spesifikasi user
+    const HOOK_DATABASE = {
+      group1: [
+        { id: "g1_1", text: "Ada satu hal kenapa [ produk ] ini bisa laku keras di tiktok, stop scrolling buat yang mau tahu simak penjelasannya.." },
+        { id: "g1_2", text: "Ada satu hal [ produk ] ini kenapa dijual murah? Yap kalian tahu? Karena sedang flash sale, coba cek deh keranjang kuningnya untuk cek promonya dulu." },
+        { id: "g1_3", text: "Apa bener? Produk yang katanya best seller ini bahannya itu bikin adem dan nyaman? Ya udah deh di sini kita udah beli dan langsung unboxing.." },
+        { id: "g1_4", text: "Apa bener? Kalau beli barang di live itu suka turun harga? Hmmm.. coba kamu cek deh live aku ini." },
+        { id: "g1_5", text: "Kenapa pake [ produk ] ini terus? Sini aku ceritain kenapa produk ini bisa paling demen dipake buat sebagian orang.." },
+        { id: "g1_6", text: "Kenapa pake [ produk ] kayak ginian kalau ke setiap acara? Karena ada kelebihan dari barangnya, jadi ini ceritanya." },
+        { id: "g1_7", text: "Favorit kalian [ produk ] kayak gimana? Nih favorit aku yang ada di lemari, kita spill satu persatu, kalian pasti pada suka.." }
+      ],
+      group2: [
+        { id: "g2_1", text: "Jujur soal bahan [ produk ] ini aku gak pernah dipikirin, alasannya sederhana karena ini yang paling tebal bahannya." },
+        { id: "g2_2", text: "Aku mau jujur-jujuran soal bahan yang aku pegang ini, harga segitu? Coba lihat.. gila bahannya nyaman dan adem banget." },
+        { id: "g2_3", text: "Gak jadi beli deh! Coba kalian lihat deh masa isi paketnya gini? Beli [ produk ] di toko ini sering aja dikasih sesuatu yang spesial......" },
+        { id: "g2_4", text: "Bakalan gak jadi beli lagi deh, varian favorit sering banget abis, apalagi [ produk ] yang aku pegang ini cepet banget habis karena warna best seller." },
+        { id: "g2_5", text: "Eh coba try on dong [ produk ] ini, oke oke berhubung banyak orang yang rame-rame coba barang ini, aku juga mau try on versi aku sendiri." },
+        { id: "g2_6", text: "Try on cuman review doang? Pembeli mana percaya. Sini aku try on + jelasin produknya secara on point biar kalian gak ragu lagi beli [ produk ] yang satu ini." }
+      ],
+      group3: [
+        { id: "g3_1", text: "Nyangka gak lo harganya seambyar ini?!" },
+        { id: "g3_2", text: "Gebrakan akhir bulan harga terjun bebas!" },
+        { id: "g3_3", text: "Dikasih harga semurah ini dong, gak masuk akal!" },
+        { id: "g3_4", text: "Udah dikasih semurah ini masih aja nawar, langsung bungkus!" },
+        { id: "g3_5", text: "Nyesel beli satuan, bundling [ produk ] gini ternyata jauh lebih hemat!" },
+        { id: "g3_6", text: "Definisi hoki sekali seumur hidup, [ produk ] ini murce banget!" },
+        { id: "g3_7", text: "Dikasih harga semurce ini gak di-CO, rugi parah!" },
+        { id: "g3_8", text: "Gacor secakep ini harganya murah poll!" },
+        { id: "g3_9", text: "Untung sabar dikit, sekarang [ produk ] lagi promo separuh harga!" },
+        { id: "g3_10", text: "Dompet sampe senyum lebar liat harganya!" },
+        { id: "g3_11", text: "Stop beli satuan, mending ambil [ produk ] ini sekarang lebih hemat!" },
+        { id: "g3_12", text: "Yakin dapet harga sehemat ini masih dianggurin?" },
+        { id: "g3_13", text: "Gak mau glowing sendirian mumpung [ produk ] lagi ambyar pwol harganya, mending CO sekarang deh!" },
+        { id: "g3_14", text: "Lagi irit-iritnya, harga [ produk ] malah terjun payung!" },
+        { id: "g3_15", text: "Nyangka gak lu, seharga seblak doang hasilnya se-GONG itu!" },
+        { id: "g3_16", text: "Mana tahaaan promo semurce ini, yakali gak CO!" },
+        { id: "g3_17", text: "Syok berat habis CO malah turun harganya wehh!" },
+        { id: "g3_18", text: "Dikira baju jutaan padahal cuma pake [ produk ] ini doang!" },
+        { id: "g3_19", text: "Untung sabar dikit, sekarang promo separuh harga!" },
+        { id: "g3_20", text: "Buruaannn!! Kapan lagi harganya semurce inii!" }
+      ]
+    };
+
+    const CTA_DATABASE = {
+      "1": "Serius, sebelum kehabisan lagi, mending beli sekarang!",
+      "2": "Yang udah paham gak usah lama-lama buat cek keranjang kuning!",
+      "3": "Ini lagi diskon, besok belum tentu masih ada stoknya ya!",
+      "4": "Kalau nunggu biasanya malah gak jadi beli, yuk klik keranjang kuning sekarang!",
+      "5": "Udah banyak yang checkout, kamu mau nunggu apa lagi?",
+      "6": "Mendingan beli sekarang sebelum harganya naik lagi!",
+      "custom": "Yuk checkout sekarang sebelum kehabisan, link ada di bawah ya langsung checkout sebelum kehabisan!"
+    };
+
+    // App State
+    const state = {
+      productName: "",
+      sceneCount: 3, // 3 or 4 scenes
+      currentHookGroup: "group1",
+      selectedHookId: "g1_1",
+      selectedCtaKey: "1",
+      model: {
+        image: null,
+        traits: ""
+      },
+      product: {
+        image: null,
+        traits: ""
+      },
+      setting: "",
+      scenes: []
+    };
+
+    function showToast(msg, icon = 'fa-circle-check text-emerald-400') {
+      const box = document.getElementById('toastBox');
+      const msgEl = document.getElementById('toastMessage');
+      const iconEl = document.getElementById('toastIcon');
+      msgEl.innerText = msg;
+      iconEl.className = `fa-solid ${icon}`;
+      box.classList.remove('translate-y-20', 'opacity-0');
+      box.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        box.classList.remove('translate-y-0', 'opacity-100');
+        box.classList.add('translate-y-20', 'opacity-0');
+      }, 3000);
+    }
+
+    function copyText(text, successMsg = 'Teks berhasil disalin!') {
+      const el = document.createElement('textarea');
+      el.value = text;
+      el.setAttribute('readonly', '');
+      el.style.position = 'absolute';
+      el.style.left = '-9999px';
+      document.body.appendChild(el);
+      el.select();
+      try {
+        document.execCommand('copy');
+        showToast(successMsg);
+      } catch (err) {
+        showToast('Gagal menyalin teks', 'fa-triangle-exclamation text-amber-400');
+      }
+      document.body.removeChild(el);
+    }
+
+    function escapeHtml(text) {
+      if (!text) return '';
+      return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function escapeJsString(str) {
+      if (!str) return '';
+      return str.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n');
+    }
+
+    function switchHookGroup(groupKey) {
+      state.currentHookGroup = groupKey;
+      const tab1 = document.getElementById('tabHook1');
+      const tab2 = document.getElementById('tabHook2');
+      const tab3 = document.getElementById('tabHook3');
+
+      [tab1, tab2, tab3].forEach(t => {
+        t.className = "py-1 px-1.5 rounded text-[10px] font-semibold border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700 transition text-center truncate";
+      });
+
+      if (groupKey === 'group1') tab1.className = "py-1 px-1.5 rounded text-[10px] font-semibold border border-fuchsia-500 bg-fuchsia-500/20 text-fuchsia-300 transition text-center truncate";
+      if (groupKey === 'group2') tab2.className = "py-1 px-1.5 rounded text-[10px] font-semibold border border-fuchsia-500 bg-fuchsia-500/20 text-fuchsia-300 transition text-center truncate";
+      if (groupKey === 'group3') tab3.className = "py-1 px-1.5 rounded text-[10px] font-semibold border border-fuchsia-500 bg-fuchsia-500/20 text-fuchsia-300 transition text-center truncate";
+
+      populateHookSelect();
+    }
+
+    function populateHookSelect() {
+      const select = document.getElementById('hookSelect');
+      select.innerHTML = '';
+      const list = HOOK_DATABASE[state.currentHookGroup] || [];
+      const prodName = state.productName.trim() || "[ produk ]";
+
+      list.forEach((item, index) => {
+        const opt = document.createElement('option');
+        opt.value = item.id;
+        const renderedText = item.text.replace(/\[\s*produk\s*\]/gi, prodName);
+        opt.innerText = `${index + 1}. ${renderedText}`;
+        select.appendChild(opt);
+      });
+
+      if (list.length > 0) {
+        state.selectedHookId = list[0].id;
+        select.value = list[0].id;
+      }
+    }
+
+    function getResolvedHookText() {
+      const prodName = state.productName.trim() || "produk kece ini";
+      const allHooks = [...HOOK_DATABASE.group1, ...HOOK_DATABASE.group2, ...HOOK_DATABASE.group3];
+      const match = allHooks.find(h => h.id === state.selectedHookId);
+      if (match) {
+        return match.text.replace(/\[\s*produk\s*\]/gi, prodName);
+      }
+      return `Ada satu hal kenapa ${prodName} ini bisa laku keras di TikTok, simak sampai habis!`;
+    }
+
+    function getResolvedCtaText() {
+      return CTA_DATABASE[state.selectedCtaKey] || CTA_DATABASE["custom"];
+    }
+
+    function validateProductName() {
+      const prodInput = document.getElementById('productNameInput');
+      const warning = document.getElementById('productNameWarning');
+      const val = prodInput.value.trim();
+
+      if (!val) {
+        warning.classList.remove('hidden');
+        prodInput.focus();
+        showToast('Wajib memasukkan Nama Produk terlebih dahulu!', 'fa-circle-exclamation text-rose-400');
+        return false;
+      } else {
+        warning.classList.add('hidden');
+        state.productName = val;
+        return true;
+      }
+    }
+
+    function generateOmniScenes() {
+      if (!validateProductName()) return;
+
+      const prodName = state.productName.trim();
+      const modelTraits = state.model.traits.trim() || "Young Indonesian female model with natural friendly expression";
+      const productTraits = state.product.traits.trim() || "Trendy stylish fashion outfit with premium fabric and perfect fitting";
+      const setting = state.setting.trim() || "Aesthetic bright bedroom with soft sheer curtains and morning daylight";
+      const count = state.sceneCount;
+
+      const hookText = getResolvedHookText();
+      const ctaText = getResolvedCtaText();
+
+      state.scenes = [];
+
+      /*
+        ATURAN STRUKTUR SCENE SESUAI BRIEF DENGAN TAG REFERENSI:
+        - @img1model: Tag foto referensi model
+        - @img2produk: Tag foto referensi produk fashion
+        - SCENE 1: Model BELUM mengenakan produk, hanya memegang/menunjukkan produk @img2produk + Dialog Hook.
+        - SCENE 2: Mencoba memakainya (Try On), tampak depan ketika digunakan & fit pertama kali.
+        - SCENE 3: Tampak samping ketika digunakan, siluet body, dan close up detail tekstur/kerah/jahitan.
+        - SCENE 4: Full spin / Twirl & diakhiri kalimat CTA mendesak & FOMO.
+      */
+
+      if (count === 3) {
+        // 3 SCENES WORKFLOW
+        state.scenes = [
+          {
+            sceneNumber: 1,
+            name: "Hook & Product Reveal (Model Belum Memakai Baju)",
+            startFramePrompt: `Ultra-photorealistic commercial still, medium shot: @img1model (${modelTraits}), wearing simple neutral inner basic tank top or plain casual tee, NOT yet wearing the product. In ${setting}, she is excitedly holding up @img2produk (${prodName}: ${productTraits}) on a minimalist hanger facing the camera, inspecting it with an intrigued, surprised expression. Soft morning sunlight highlights the textile weave in her hands, cinematic depth of field, 8k resolution.`,
+            endFramePrompt: `Consistent photorealistic still (continuity with Start Frame): Same model @img1model (${modelTraits}) still in the same neutral base attire and same ${setting}. She brings the held garment @img2produk (${prodName}: ${productTraits}) closer to the camera lens with a beaming, confident gaze, nodding persuasively while holding it against her chest to preview the look without wearing it. Consistent warm lighting.`,
+            motionPrompt: `Camera performs a slow push-in towards @img1model. The model turns the held garment @img2produk slightly to catch the daylight, gestures expressively with one hand pointing to the item while looking straight into the lens with high-energy conversational expression within 8 seconds.`,
+            dialogueVO: hookText
+          },
+          {
+            sceneNumber: 2,
+            name: "Try-On & Front View Showcase",
+            startFramePrompt: `Ultra-photorealistic fashion still, medium-full shot: Same model @img1model (${modelTraits}) now FULLY WEARING @img2produk (${prodName}: ${productTraits}) in the same ${setting}. She is captured in a pristine front-facing angle, standing tall with hands softly resting on the waistline, displaying the front collar, buttons, and flattering silhouette. Natural soft rim lighting, clean floor-to-ceiling composition.`,
+            endFramePrompt: `Consistent photorealistic still: Same model @img1model wearing the exact same outfit @img2produk (${prodName}: ${productTraits}). She smoothly steps one pace closer to camera, gently running her hands down the front torso fabric to emphasize the neat drape and wrinkle-free texture, smiling approvingly directly into the camera lens in ${setting}.`,
+            motionPrompt: `Smooth stabilized camera tracks @img1model as she steps forward in front view wearing @img2produk, smiling brightly, lightly tugging the front hem to prove its perfect fit and comfortable drape, maintaining eye contact with the audience within 8 seconds.`,
+            dialogueVO: `Pas dicoba langsung kelihatan se-elegan ini jatuhnya di badan. Cuttingan depannya bener-bener rapi, gak bikin begah, dan auto bikin siluet keliatan lebih ramping!`
+          },
+          {
+            sceneNumber: 3,
+            name: "Side Profile, Detail Close-up & Urgent CTA",
+            startFramePrompt: `Photorealistic close-up to medium shot: Same model @img1model (${modelTraits}) wearing @img2produk (${prodName}: ${productTraits}). She is initially turned in a 90-degree SIDE PROFILE view to showcase the side drape, sleeve volume, and back fitting, before turning her head back toward the lens in ${setting}. Soft morning sunlight highlights the fabric's rich texture and delicate stitching.`,
+            endFramePrompt: `Consistent full-body photorealistic shot: Same model @img1model wearing the exact same outfit @img2produk in ${setting}. She now faces forward with one hand on hip, smiling urgently with an inviting gesture pointing down towards the bottom screen shopping bag area. Warm cinematic lighting, perfect color grading.`,
+            motionPrompt: `Camera starts focused on the side silhouette of @img1model wearing @img2produk, then pans around as the model twirls back to front position, touches the collar detail close to the lens, and then excitedly points down to the checkout link with an urgent, FOMO-inducing smile within 9 seconds.`,
+            dialogueVO: `Tampak sampingnya juga super flattering dan bahannya adem pol! ${ctaText}`
+          }
+        ];
+      } else {
+        // 4 SCENES WORKFLOW
+        state.scenes = [
+          {
+            sceneNumber: 1,
+            name: "Hook & Product Reveal (Model Belum Memakai Baju)",
+            startFramePrompt: `Ultra-photorealistic commercial still, medium shot: @img1model (${modelTraits}), wearing simple neutral inner camisole or basic tee, NOT yet wearing the featured item. In ${setting}, she is excitedly holding up @img2produk (${prodName}: ${productTraits}) in front of her on a wooden hanger, leaning slightly forward with an intriguing, excited expression into camera lens. Natural morning lighting, cinematic 50mm f/1.8 lens.`,
+            endFramePrompt: `Consistent photorealistic commercial still: Same model @img1model (${modelTraits}) still holding @img2produk (${prodName}: ${productTraits}) against her shoulder to preview its style, looking directly into the camera with an eyebrow-raised persuasive smile in ${setting}. Identical soft rim lighting and background tone.`,
+            motionPrompt: `Camera does a gentle slow push-in towards @img1model. Model gestures enthusiastically at the held garment @img2produk, showcasing its fresh unboxing look, nodding at the audience to stop scrolling within 8 seconds.`,
+            dialogueVO: hookText
+          },
+          {
+            sceneNumber: 2,
+            name: "Try-On & Front View Silhouette",
+            startFramePrompt: `Ultra-photorealistic fashion still, medium-full shot: Same model @img1model (${modelTraits}) now FULLY DRESSED in @img2produk (${prodName}: ${productTraits}) in ${setting}. She stands poised facing straight forward, showcasing the chest silhouette, shoulder fit, and front accents in full photorealistic clarity.`,
+            endFramePrompt: `Consistent photorealistic still: Same model @img1model in the exact same outfit @img2produk, tilting head charmingly and clasping hands near waist, beaming with delight at how flattering the front cut fits her body in ${setting}. Consistent lighting.`,
+            motionPrompt: `Camera captures @img1model doing a gentle step-forward reveal wearing @img2produk. She glides her fingers along the front hem to demonstrate the breezy silhouette and neat stitching within 8 seconds.`,
+            dialogueVO: `Lihat deh pas udah dipake, cuttingan depannya bener-bener pas di badan! Gak sesak sama sekali dan langsung ngasih ilusi lebih jenjang.`
+          },
+          {
+            sceneNumber: 3,
+            name: "Side Profile & Close-up Fabric Texture",
+            startFramePrompt: `Close-up macro fashion shot: Focused on the side profile of @img1model (${modelTraits}) wearing @img2produk (${prodName}: ${productTraits}) in ${setting}. One hand gently touches the collar and rich fabric texture near the neckline, showcasing the breathable textile weave and sleeve seams in crisp 8k detail.`,
+            endFramePrompt: `Consistent close-up still: Same model @img1model and garment @img2produk, transitioning from side angle to three-quarter view. She lightly pinches the fabric between fingers to showcase its soft airflow elasticity, nodding with sincere approval.`,
+            motionPrompt: `Slow macro pan across the garment @img2produk texture and side silhouette, then shifting focus back to @img1model smiling face as she tests the softness of the fabric within 8 seconds.`,
+            dialogueVO: `Dari samping keliatan jatuh banget bahannya, airflow super adem, gak gampang lecek walau dipakai seharian.`
+          },
+          {
+            sceneNumber: 4,
+            name: "Full Fit Spin & Urgent FOMO CTA",
+            startFramePrompt: `Full-body shot in photorealistic clarity: Same model @img1model (${modelTraits}) styled in @img2produk (${prodName}: ${productTraits}) in ${setting}. She starts midway through a playful twirl, dress flaring gently, aesthetic room behind.`,
+            endFramePrompt: `Consistent full-body photorealistic shot: Same model @img1model settles facing the camera, confident warm smile, both index fingers gesturing emphatically toward the bottom shopping cart area. Identical crisp color grading.`,
+            motionPrompt: `Camera executes a steady waist-level shot. @img1model completes a 360 spin showcasing front and back fit of @img2produk, finishes in front pose, and urgently points downward with an irresistible smile within 8 to 10 seconds.`,
+            dialogueVO: `Bagus banget kan? ${ctaText}`
+          }
+        ];
+      }
+
+      renderOmniScenesUI();
+      showToast(`Prompt Omni siap dengan tag @img1model & @img2produk (${count} Scene)!`);
+    }
+
+    function renderOmniScenesUI() {
+      const container = document.getElementById('omniScenesContainer');
+      container.innerHTML = '';
+
+      state.scenes.forEach((scene) => {
+        const card = document.createElement('div');
+        card.className = "bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-4 relative overflow-hidden";
+        card.id = `omniCard_${scene.sceneNumber}`;
+
+        const isFirstScene = scene.sceneNumber === 1;
+        const tagBadge = isFirstScene 
+          ? `<span class="text-[10px] px-2 py-0.5 rounded bg-rose-500/15 text-rose-300 border border-rose-500/30 font-semibold"><i class="fa-solid fa-hand-holding"></i> Model Belum Memakai Baju (Holding Product)</span>`
+          : `<span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-semibold"><i class="fa-solid fa-shirt"></i> Model Memakai & Review Produk</span>`;
+
+        card.innerHTML = `
+          <!-- Header Scene -->
+          <div class="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-slate-800">
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-xl bg-gradient-to-br from-fuchsia-600 to-indigo-600 text-white font-extrabold text-xs flex items-center justify-center shadow-md shadow-fuchsia-600/20">
+                S${scene.sceneNumber}
+              </span>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h3 class="text-sm font-bold text-white">Scene ${scene.sceneNumber} (Maks 10 Detik)</h3>
+                  ${tagBadge}
+                </div>
+                <p class="text-[11px] text-slate-400">• ${escapeHtml(scene.name)}</p>
+              </div>
+            </div>
+
+            <button type="button" onclick="copySceneBlock(${scene.sceneNumber})" class="text-xs px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 flex items-center gap-1.5 transition">
+              <i class="fa-regular fa-copy text-fuchsia-400"></i> Salin Scene ${scene.sceneNumber}
+            </button>
+          </div>
+
+          <!-- Component 1: START FRAME -->
+          <div class="space-y-1.5">
+            <div class="flex items-center justify-between">
+              <label class="text-xs font-bold text-slate-200 flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono badge-start font-bold">[Start Frame Image Prompt]</span>
+                <span class="text-[11px] text-slate-400 hidden sm:inline">(Titik Awal Scene - English)</span>
+              </label>
+              <button type="button" onclick="copyText('${escapeJsString(scene.startFramePrompt)}', 'Start Frame Scene ${scene.sceneNumber} disalin!')" class="text-[11px] text-slate-400 hover:text-emerald-400 flex items-center gap-1">
+                <i class="fa-regular fa-clone"></i> Salin Prompt
+              </button>
+            </div>
+            <textarea 
+              rows="3" 
+              onchange="updateSceneField(${scene.sceneNumber}, 'startFramePrompt', this.value)"
+              class="w-full font-mono text-xs bg-slate-950/90 border border-emerald-500/30 rounded-xl p-3 text-emerald-200 focus:outline-none focus:border-emerald-400 leading-relaxed transition">${escapeHtml(scene.startFramePrompt)}</textarea>
+          </div>
+
+          <!-- Component 2: END FRAME -->
+          <div class="space-y-1.5">
+            <div class="flex items-center justify-between">
+              <label class="text-xs font-bold text-slate-200 flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono badge-end font-bold">[End Frame Image Prompt]</span>
+                <span class="text-[11px] text-slate-400 hidden sm:inline">(Titik Akhir Scene & Kontinuitas - English)</span>
+              </label>
+              <button type="button" onclick="copyText('${escapeJsString(scene.endFramePrompt)}', 'End Frame Scene ${scene.sceneNumber} disalin!')" class="text-[11px] text-slate-400 hover:text-purple-400 flex items-center gap-1">
+                <i class="fa-regular fa-clone"></i> Salin Prompt
+              </button>
+            </div>
+            <textarea 
+              rows="3" 
+              onchange="updateSceneField(${scene.sceneNumber}, 'endFramePrompt', this.value)"
+              class="w-full font-mono text-xs bg-slate-950/90 border border-purple-500/30 rounded-xl p-3 text-purple-200 focus:outline-none focus:border-purple-400 leading-relaxed transition">${escapeHtml(scene.endFramePrompt)}</textarea>
+          </div>
+
+          <!-- Component 3: VIDEO MOTION PROMPT -->
+          <div class="space-y-1.5">
+            <div class="flex items-center justify-between">
+              <label class="text-xs font-bold text-slate-200 flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono badge-motion font-bold">[Video Motion Prompt]</span>
+                <span class="text-[11px] text-slate-400 hidden sm:inline">(Gerakan Kamera & Model &le; 10s - English)</span>
+              </label>
+              <button type="button" onclick="copyText('${escapeJsString(scene.motionPrompt)}', 'Motion Prompt Scene ${scene.sceneNumber} disalin!')" class="text-[11px] text-slate-400 hover:text-sky-400 flex items-center gap-1">
+                <i class="fa-regular fa-clone"></i> Salin Prompt
+              </button>
+            </div>
+            <textarea 
+              rows="2" 
+              onchange="updateSceneField(${scene.sceneNumber}, 'motionPrompt', this.value)"
+              class="w-full font-mono text-xs bg-slate-950/90 border border-sky-500/30 rounded-xl p-3 text-sky-200 focus:outline-none focus:border-sky-400 leading-relaxed transition">${escapeHtml(scene.motionPrompt)}</textarea>
+          </div>
+
+          <!-- Component 4: DIALOGUE / VO SCRIPT -->
+          <div class="space-y-1.5">
+            <div class="flex items-center justify-between">
+              <label class="text-xs font-bold text-slate-200 flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono badge-vo font-bold">[Dialogue/VO]</span>
+                <span class="text-[11px] text-slate-400 hidden sm:inline">(Skrip Percakapan Afiliasi - Bahasa Indonesia)</span>
+              </label>
+              <button type="button" onclick="copyText('${escapeJsString(scene.dialogueVO)}', 'Voiceover Scene ${scene.sceneNumber} disalin!')" class="text-[11px] text-slate-400 hover:text-amber-400 flex items-center gap-1">
+                <i class="fa-regular fa-clone"></i> Salin Teks
+              </button>
+            </div>
+            <div class="relative">
+              <input 
+                type="text" 
+                value="${escapeHtml(scene.dialogueVO)}"
+                onchange="updateSceneField(${scene.sceneNumber}, 'dialogueVO', this.value)"
+                class="w-full text-xs bg-slate-950/90 border border-amber-500/30 rounded-xl px-3 py-2.5 text-amber-100 placeholder-slate-500 focus:outline-none focus:border-amber-400 transition">
+            </div>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    function updateSceneField(sceneNum, field, value) {
+      const s = state.scenes.find(x => x.sceneNumber === sceneNum);
+      if (s) {
+        s[field] = value;
+      }
+    }
+
+    function copySceneBlock(sceneNum) {
+      const s = state.scenes.find(x => x.sceneNumber === sceneNum);
+      if (!s) return;
+      const text = `Scene ${s.sceneNumber} (Maks 10 Detik)
+[Start Frame Image Prompt]: ${s.startFramePrompt}
+[End Frame Image Prompt]: ${s.endFramePrompt}
+[Video Motion Prompt]: ${s.motionPrompt}
+[Dialogue/VO]: "${s.dialogueVO}"`;
+      copyText(text, `Scene ${sceneNum} disalin lengkap sesuai format!`);
+    }
+
+    function formatFullOmniOutput() {
+      let output = `PROMPT OMNI WORKFLOW\n\n`;
+      state.scenes.forEach((s) => {
+        output += `Scene ${s.sceneNumber} (Maks 10 Detik)\n`;
+        output += `[Start Frame Image Prompt]: ${s.startFramePrompt}\n`;
+        output += `[End Frame Image Prompt]: ${s.endFramePrompt}\n`;
+        output += `[Video Motion Prompt]: ${s.motionPrompt}\n`;
+        output += `[Dialogue/VO]: "${s.dialogueVO}"\n\n`;
+      });
+      return output.trim();
+    }
+
+    function setupImageDrop(type, fileInputId, dropId, previewBoxId, imgId, placeholderId, removeBtnId, traitsInputId) {
+      const fileInput = document.getElementById(fileInputId);
+      const previewBox = document.getElementById(previewBoxId);
+      const img = document.getElementById(imgId);
+      const placeholder = document.getElementById(placeholderId);
+      const removeBtn = document.getElementById(removeBtnId);
+      const traitsInput = document.getElementById(traitsInputId);
+
+      fileInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            img.src = event.target.result;
+            previewBox.classList.remove('hidden');
+            placeholder.classList.add('hidden');
+            state[type].image = event.target.result;
+            showToast(`Foto ${type === 'model' ? 'Model' : 'Produk'} berhasil diunggah! Silakan tulis deskripsinya.`);
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      removeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        fileInput.value = '';
+        img.src = '';
+        previewBox.classList.add('hidden');
+        placeholder.classList.remove('hidden');
+        state[type].image = null;
+      });
+
+      traitsInput.addEventListener('input', (e) => {
+        state[type].traits = e.target.value;
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      // Setup Upload Slots
+      setupImageDrop('model', 'fileModel', 'dropModel', 'previewModelBox', 'imgModel', 'placeholderModel', 'btnRemoveModel', 'modelTraitsInput');
+      setupImageDrop('product', 'fileProduct', 'dropProduct', 'previewProductBox', 'imgProduct', 'placeholderProduct', 'btnRemoveProduct', 'productTraitsInput');
+
+      // Reset Button Listener
+      const btnResetAll = document.getElementById('btnResetAll');
+      if (btnResetAll) {
+        btnResetAll.addEventListener('click', () => {
+          document.getElementById('productNameInput').value = '';
+          document.getElementById('modelTraitsInput').value = '';
+          document.getElementById('productTraitsInput').value = '';
+          document.getElementById('videoSetting').value = '';
+          state.productName = '';
+          state.model.traits = '';
+          state.product.traits = '';
+          state.setting = '';
+          state.scenes = [];
+          document.getElementById('btnRemoveModel').click();
+          document.getElementById('btnRemoveProduct').click();
+          const container = document.getElementById('omniScenesContainer');
+          container.innerHTML = `
+            <div id="emptyScenePlaceholder" class="glass-card border border-dashed border-slate-800/90 rounded-2xl p-12 text-center text-slate-400">
+              <div class="w-14 h-14 mx-auto mb-3.5 rounded-2xl bg-gradient-to-tr from-slate-900 to-slate-800 border border-slate-700/80 flex items-center justify-center text-fuchsia-400 shadow-xl">
+                <i class="fa-solid fa-film text-xl"></i>
+              </div>
+              <h3 class="text-sm font-bold text-slate-200">Studio Prompt Siap Dijalankan</h3>
+              <p class="text-xs text-slate-400 mt-1 max-w-md mx-auto leading-relaxed">
+                Upload foto referensi, isi nama produk fashion Anda, lalu klik <span class="text-fuchsia-300 font-semibold">"Rancang Prompt Omni Workflow"</span> untuk menghasilkan spesifikasi video start-to-end frame.
+              </p>
+            </div>
+          `;
+          showToast('Form studio telah dibersihkan!');
+        });
+      }
+
+      // Sync initial textarea values
+      document.getElementById('productNameInput').value = state.productName;
+      document.getElementById('modelTraitsInput').value = state.model.traits;
+      document.getElementById('productTraitsInput').value = state.product.traits;
+      document.getElementById('videoSetting').value = state.setting;
+
+      // Populate Initial Hooks
+      populateHookSelect();
+
+      // Product Name listener
+      document.getElementById('productNameInput').addEventListener('input', (e) => {
+        state.productName = e.target.value;
+        populateHookSelect();
+      });
+
+      // Hook Select listener
+      document.getElementById('hookSelect').addEventListener('change', (e) => {
+        state.selectedHookId = e.target.value;
+      });
+
+      // CTA Select listener
+      document.getElementById('ctaSelect').addEventListener('change', (e) => {
+        state.selectedCtaKey = e.target.value;
+      });
+
+      // Video Setting listener
+      document.getElementById('videoSetting').addEventListener('input', (e) => {
+        state.setting = e.target.value;
+      });
+
+      // Scene Count Selector (3 vs 4)
+      const sceneSelBtns = document.querySelectorAll('.scene-sel-btn');
+      sceneSelBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const count = parseInt(btn.dataset.scenes);
+          state.sceneCount = count;
+          sceneSelBtns.forEach(b => {
+            b.className = "scene-sel-btn py-2 px-1 rounded-lg text-xs font-semibold border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700 transition text-center";
+          });
+          btn.className = "scene-sel-btn py-2 px-1 rounded-lg text-xs font-semibold border border-fuchsia-500 bg-fuchsia-600/20 text-fuchsia-300 transition text-center";
+          if (state.scenes.length > 0) {
+            generateOmniScenes();
+          }
+        });
+      });
+
+      // Generate Button
+      document.getElementById('btnGenerateOmni').addEventListener('click', () => {
+        generateOmniScenes();
+      });
+
+      // Raw Text Copy Button
+      document.getElementById('btnCopyRawMarkdown').addEventListener('click', () => {
+        if (state.scenes.length === 0) {
+          showToast('Silakan rancang prompt terlebih dahulu!', 'fa-circle-exclamation text-amber-400');
+          return;
+        }
+        if (!validateProductName()) return;
+        const fullText = formatFullOmniOutput();
+        copyText(fullText, 'PROMPT OMNI WORKFLOW lengkap berhasil disalin!');
+      });
+
+      // Export Modal
+      const modalExport = document.getElementById('modalExport');
+      const btnExportOmni = document.getElementById('btnExportOmni');
+      const btnCloseExport = document.getElementById('btnCloseExport');
+      const exportTextarea = document.getElementById('exportTextarea');
+      const btnCopyFromModal = document.getElementById('btnCopyFromModal');
+
+      btnExportOmni.addEventListener('click', () => {
+        if (state.scenes.length === 0) {
+          showToast('Silakan rancang prompt terlebih dahulu!', 'fa-circle-exclamation text-amber-400');
+          return;
+        }
+        if (!validateProductName()) return;
+        exportTextarea.value = formatFullOmniOutput();
+        document.getElementById('exportTotalCount').innerText = `${state.scenes.length} Scene terformat sesuai standar Omni`;
+        modalExport.classList.remove('hidden');
+      });
+      btnCloseExport.addEventListener('click', () => modalExport.classList.add('hidden'));
+      btnCopyFromModal.addEventListener('click', () => {
+        copyText(exportTextarea.value, 'Format Omni berhasil disalin ke clipboard!');
+      });
+    });
+  </script>
+
+  <!-- PWA: tombol install + service worker -->
+  <button id="pwa-install-btn" type="button" hidden
+    style="position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;padding:10px 16px;border-radius:9999px;border:0;font:600 13px 'Plus Jakarta Sans',sans-serif;color:#fff;background:linear-gradient(135deg,#c026d3,#6366f1);box-shadow:0 8px 24px rgba(192,38,211,.35);cursor:pointer">
+    Install Aplikasi
+  </button>
+  <script>
+    (function () {
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('sw.js').catch(function (e) { console.warn('SW gagal:', e); });
+        });
+      }
+      var deferred = null, btn = document.getElementById('pwa-install-btn');
+      window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault(); deferred = e; btn.hidden = false;
+      });
+      btn.addEventListener('click', function () {
+        if (!deferred) return;
+        deferred.prompt();
+        deferred.userChoice.finally(function () { deferred = null; btn.hidden = true; });
+      });
+      window.addEventListener('appinstalled', function () { btn.hidden = true; });
+    })();
+  </script>
+</body>
+</html>
